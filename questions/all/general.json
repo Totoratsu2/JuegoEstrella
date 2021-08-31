@@ -1,7 +1,12 @@
-[
-    {
+{
+    "1": {
+        "question": "What do you want to do?",
+        "options": ["Yes", "No", "Maybe"],
+        "correctAnswer": 0 
+    },
+    "2": {
         "question": "What do you want to do?",
         "options": ["Yes", "No", "Maybe"],
         "correctAnswer": 0 
     }
-]
+}

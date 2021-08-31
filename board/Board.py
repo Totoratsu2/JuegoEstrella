@@ -1,27 +1,44 @@
-from colorama.ansi import Fore, Style
+from utils import clearConsole, stopConsole
 from board.Tile import Tile
 from board.Player import Player
+from colorama.ansi import Fore, Style
 
+from random import randint
 from questions.main import getQuestions
 
 
 class Board:
-    lenght: list[int]
-    tiles: list[list[Tile]]
-
-    currentTurn = 0
-    dice = 0
-
-    player1: Player
-    player2: Player
-
     def __init__(self, n=1, m=5):
         self.lenght = [n, m]
+        self.tiles = []
 
-        self.player1 = Player(Fore.BLUE)
-        self.player2 = Player(Fore.RED)
+        self.gameOver = False
+        self.currentTurn = 0
+        self.dice = 0
+
+        self.player1 = Player(Fore.CYAN)
+        self.player2 = Player(Fore.LIGHTMAGENTA_EX)
 
         self.generate()
+
+    def showWinner(self):
+        lines = "\t" + ("----" * 8) + "-"
+        clearConsole()
+
+        if self.player1.tilePosition > self.player2.tilePosition:
+            print(f"\n\n{lines}")
+            print(
+                f"\t| Ganador |\t{self.player1.color}Jugador 1{Style.RESET_ALL}\t|"
+            )
+            print(f"{lines}\n\n")
+        else:
+            print(f"\n\n{lines}")
+            print(
+                f"\t| Ganador |\t{self.player2.color}Jugador 2{Style.RESET_ALL}\t|"
+            )
+            print(f"{lines}\n\n")
+
+        self._showPlayerScoreBoard()
 
     def generate(self) -> None:
         questions = getQuestions()
@@ -54,27 +71,57 @@ class Board:
         print(f"\t|\t\tDado\t\t|\t {self.dice}\t |\n{topTableLines}")
 
     def _showPlayerScoreBoard(self):
-        lines = "\t" + ("----" * 4)
-        matrix = [[
-            f"\t| {self.player1.color}Jugador 1{Style.RESET_ALL} \t|",
-            f"\t| {self.player2.color}Jugador 2{Style.RESET_ALL} \t|"
-        ],
-                  [
-                      f"\t| Casilla  | {self.player1.tilePosition} \t|",
-                      f"\t| Casilla  | {self.player2.tilePosition} \t|"
-                  ],
-                  [
-                      f"\t| Aciertos | {self.player1.score} \t|",
-                      f"\t| Aciertos | {self.player2.score} \t|"
-                  ]]
+        lines = "\t" + ("----" * 4) + "-"
+        player1Tab = "\t" if self.player1.tilePosition < 10 else ""
+        player2Tab = "\t" if self.player2.tilePosition < 10 else ""
+
+        matrix = [
+            [
+                f"\t| {self.player1.color}Jugador 1{Style.RESET_ALL} \t|",
+                f"\t| {self.player2.color}Jugador 2{Style.RESET_ALL} \t|"
+            ],
+            [
+                f"\t| Casilla  | {self.player1.tilePosition} {player1Tab}|",
+                f"\t| Casilla  | {self.player2.tilePosition} {player2Tab}|"
+            ],
+            [
+                f"\t| Aciertos | {self.player1.score} \t|",
+                f"\t| Aciertos | {self.player2.score} \t|"
+            ]
+        ]
 
         print(f"{lines}\t{lines}")
         for line in matrix:
             print("\t".join(line))
             print(f"{lines}\t{lines}")
 
+    def _rollDice(self):
+        self.dice = randint(1, 6)
+        lenght = (self.lenght[0] * self.lenght[1]) - 1
+
+        if (self.currentTurn % 2 == 0):
+            if (self.player1.tilePosition + self.dice) > lenght:
+                self.player1.tilePosition = lenght
+                self.gameOver = True
+            else:
+                self.player1.tilePosition += self.dice
+        else:
+            if (self.player2.tilePosition + self.dice) > lenght:
+                self.player2.tilePosition = lenght
+                self.gameOver = True
+            else:
+                self.player2.tilePosition += self.dice
+
+    def playTurn(self):
+        stopConsole()
+        self._rollDice()
+
+        # ask question here
+
+        self.currentTurn += 1
+
     def show(self):
-        boardLines = "-----" * self.lenght[0]
+        boardLines = "-----" * self.lenght[0] + "-"
         tiles = [0, 0]
 
         self._showTurnAndDice()
@@ -92,7 +139,8 @@ class Board:
                     tile = f" {x}" if x.index < 10 else f"{x}"
                 else:
                     if isP1:
-                        tile = f"{self.player1}"
+                        space = " " if not isP2 else ""
+                        tile = f"{self.player1}{space}"
                     if isP2:
                         tile = tile + f"{self.player2}" if len(
                             tile) > 0 else f" {self.player2}"
