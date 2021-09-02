@@ -1,4 +1,4 @@
-from utils import clearConsole, stopConsole
+from utils import clearConsole, readInt, stopConsole
 from board.Tile import Tile
 from board.Player import Player
 from colorama.ansi import Fore, Style
@@ -19,6 +19,7 @@ class Board:
         self.player1 = Player(Fore.CYAN)
         self.player2 = Player(Fore.LIGHTMAGENTA_EX)
 
+        self.questions = getQuestions()
         self.generate()
 
     def showWinner(self):
@@ -41,7 +42,6 @@ class Board:
         self._showPlayerScoreBoard()
 
     def generate(self) -> None:
-        questions = getQuestions()
         matrix: list[list[Tile]] = []
         count = 0
 
@@ -97,30 +97,49 @@ class Board:
 
     def _rollDice(self):
         self.dice = randint(1, 6)
-        lenght = (self.lenght[0] * self.lenght[1]) - 1
 
-        if (self.currentTurn % 2 == 0):
-            if (self.player1.tilePosition + self.dice) > lenght:
-                self.player1.tilePosition = lenght
-                self.gameOver = True
-            else:
-                self.player1.tilePosition += self.dice
+        if self.currentTurn % 2 == 0:
+            self.gameOver = self.player1.goTo(self.dice, self.lenght)
         else:
-            if (self.player2.tilePosition + self.dice) > lenght:
-                self.player2.tilePosition = lenght
-                self.gameOver = True
+            self.gameOver = self.player2.goTo(self.dice, self.lenght)
+
+    def _askQuestion(self):
+        question = self.questions[randint(0, len(self.questions) - 1)]
+        self.questions.remove(question)
+
+        clearConsole()
+        question.show()
+
+        response = None
+        while response is None:
+            response = readInt()
+        correct = question.verifyOption(response)
+
+        if not correct:
+            pass
+        else:
+            if self.currentTurn % 2 == 0:
+                self.player1.score += 1
             else:
-                self.player2.tilePosition += self.dice
+                self.player2.score += 1
+
+            clearConsole()
+            print(f"\n\n\t{Fore.GREEN}Correcto!!!{Style.RESET_ALL}\n\n")
+        
+        stopConsole()
 
     def playTurn(self):
         stopConsole()
         self._rollDice()
 
-        # ask question here
+        self.show()
+        stopConsole()
+        self._askQuestion()
 
         self.currentTurn += 1
 
     def show(self):
+        clearConsole()
         boardLines = "-----" * self.lenght[0] + "-"
         tiles = [0, 0]
 

@@ -1,11 +1,24 @@
 import json
 from typing import TypedDict
+from questions.Question import Question
+
 from os import path, getcwd, walk
 
 
-def getQuestions() -> list[TypedDict]:
+def organizeQuestions(raw: TypedDict):
+    questionList = []
+
+    for _, values in raw.items():
+        question = Question(values["question"], values["options"],
+                            values["correctAnswer"])
+        questionList.append(question)
+
+    return questionList
+
+
+def getQuestions() -> list[Question]:
     directory = path.join(getcwd(), 'questions', 'all')
-    questionFiles: list[TypedDict] = []
+    questionList = []
 
     for __, _, files in walk(directory):
         for file in files:
@@ -13,6 +26,6 @@ def getQuestions() -> list[TypedDict]:
             data: TypedDict = json.load(questionFile)
             questionFile.close()
 
-            questionFiles.append(data)
+            questionList.extend(organizeQuestions(data))
 
-    return data
+    return questionList

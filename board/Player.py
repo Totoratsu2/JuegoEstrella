@@ -19,3 +19,16 @@ class Player:
         if self.tilePosition == tile:
             return True
         return False
+
+    def goTo(self, tile: int, lenght: list[int]) -> bool:
+        totalLenght = (lenght[0] * lenght[1]) - 1
+
+        if (self.tilePosition + tile) < 0:
+            self.tilePosition = 0
+        elif (self.tilePosition + tile) > totalLenght:
+            self.tilePosition = totalLenght
+            return True
+        else:
+            self.tilePosition += tile
+
+        return False

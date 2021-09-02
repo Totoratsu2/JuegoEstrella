@@ -1,4 +1,6 @@
 from board.Board import Board
+from colorama.ansi import Fore, Style
+
 from utils import clearConsole, stopConsole
 
 
@@ -7,7 +9,6 @@ def main():
         board = Board(5, 4)
 
         while not board.gameOver:
-            clearConsole()
             board.show()
             board.playTurn()
 
@@ -16,4 +17,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print(f"\n\n\n\t\t{Fore.GREEN}Hasta pronto!!{Style.RESET_ALL}\n\n")
