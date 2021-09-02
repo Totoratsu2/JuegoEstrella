@@ -1,13 +1,12 @@
 from colorama import Style
-
+from board.Tile import Tile
 
 class Player:
-    tilePosition = 0
-    score = 0
-    color: str
-
     def __init__(self, color: str):
         self.color = color
+        self.score = 0
+
+        self.tilePosition = 0
 
     def __str__(self):
         return f"{self.color}★{Style.RESET_ALL}"
@@ -30,5 +29,7 @@ class Player:
             return True
         else:
             self.tilePosition += tile
+            if  self.tilePosition >= totalLenght:
+                return True
 
         return False

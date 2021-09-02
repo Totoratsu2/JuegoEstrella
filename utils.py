@@ -7,7 +7,7 @@ def clearConsole():
 
 
 def stopConsole(msg='Presiona Enter para continuar ...'):
-    input(msg)
+    input("\n" + msg)
 
 
 def readInt(msg="Ingrese la opcion correcta: ", range=[0, 2]) -> int:

@@ -1,7 +1,7 @@
 from board.Board import Board
 from colorama.ansi import Fore, Style
 
-from utils import clearConsole, stopConsole
+from utils import stopConsole
 
 
 def main():

@@ -1,5 +1,5 @@
 from utils import clearConsole, readInt, stopConsole
-from board.Tile import Tile
+from board.Tile import Tile, getPunish
 from board.Player import Player
 from colorama.ansi import Fore, Style
 
@@ -116,7 +116,12 @@ class Board:
         correct = question.verifyOption(response)
 
         if not correct:
-            pass
+            if self.currentTurn % 2 == 0:
+                self.player1.goTo(getPunish(self.player1.tilePosition),
+                                  self.lenght)
+            else:
+                self.player2.goTo(getPunish(self.player2.tilePosition),
+                                  self.lenght)
         else:
             if self.currentTurn % 2 == 0:
                 self.player1.score += 1
@@ -125,7 +130,7 @@ class Board:
 
             clearConsole()
             print(f"\n\n\t{Fore.GREEN}Correcto!!!{Style.RESET_ALL}\n\n")
-        
+
         stopConsole()
 
     def playTurn(self):
@@ -137,6 +142,7 @@ class Board:
         self._askQuestion()
 
         self.currentTurn += 1
+        self.show()
 
     def show(self):
         clearConsole()

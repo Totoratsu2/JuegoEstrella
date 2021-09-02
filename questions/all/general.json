@@ -1,12 +1,306 @@
 {
-  "1": {
-    "question": "What do you want to do?",
-    "options": ["Yes", "No", "Maybe"],
+  "pregunta1": {
+    "question": "¿Cuál es el lugar más frío de la tierra?",
+    "options": ["Antartida", "Noruega", "Paris"],
     "correctAnswer": 0
   },
-  "25": {
-    "question": "¿Qué rama de la Biología estudia los animales?",
-    "options": ["Yes", "No", "Maybe"],
+  "pregunta2": {
+    "question": "¿Cuál es el río más largo del mundo?",
+    "options": ["Nilo", "Amazonas", "Mississippi"],
+    "correctAnswer": 1
+  },
+  "pregunta3": {
+    "question": "¿Cómo se llama la Reina del Reino Unido?",
+    "options": ["Diana", "Isabel II", "Isabella"],
+    "correctAnswer": 2
+  },
+  "pregunta4": {
+    "question": "¿Dónde originaron los juegos olímpicos?",
+    "options": ["Grecia", "Roma", "Atenas"],
     "correctAnswer": 0
+  },
+  "pregunta5": {
+    "question": "¿Qué tipo de animal es la ballena?",
+    "options": ["Carnivoro", "Mamifero", "Omnívoro"],
+    "correctAnswer": 1
+  },
+  "pregunta6": {
+    "question": "¿Qué cantidad de huesos en el cuerpo humano?",
+    "options": ["210", "300", "206"],
+    "correctAnswer": 2
+  },
+  "pregunta7": {
+    "question": "¿Cuándo acabó la II Guerra Mundial?",
+    "options": ["1945", "1975", "1485"],
+    "correctAnswer": 0
+  },
+  "pregunta8": {
+    "question": "¿Quién pintó “la última cena”?",
+    "options": ["Leonardo diCaprio", "Leonardo da Vinci", "Pablo Picasso"],
+    "correctAnswer": 1
+  },
+  "pregunta9": {
+    "question": "¿Dónde se encuentra la Sagrada Familia?",
+    "options": ["España", "Madrid", "Barcelona"],
+    "correctAnswer": 2
+  },
+  "pregunta10": {
+    "question": "¿En qué país se encuentra la torre de Pisa?",
+    "options": ["Italia", "Suiza", "Polonia"],
+    "correctAnswer": 0
+  },
+  "pregunta11": {
+    "question": "¿Cuál es tercer planeta en el sistema solar?",
+    "options": ["Saturno", "Tierra", "Martes"],
+    "correctAnswer": 1
+  },
+  "pregunta12": {
+    "question": "¿Qué son los humanos?",
+    "options": ["Carnívoros", "Viviparos", "Omnívoros"],
+    "correctAnswer": 2
+  },
+  "pregunta13": {
+    "question": "¿¿Cómo se denomina el resultado de la multiplicación?",
+    "options": ["Producto", "Cociente", "Resultado"],
+    "correctAnswer": 0
+  },
+  "pregunta14": {
+    "question": "¿Cuál es el océano más grande?",
+    "options": ["Caribe", "Pacífico", "Atlàntico"],
+    "correctAnswer": 1
+  },
+  "pregunta15": {
+    "question": "¿En qué año llegó Cristóbal Colón a América?",
+    "options": ["1822", "1346", "1492"],
+    "correctAnswer": 2
+  },
+  "pregunta16": {
+    "question": "¿Cuál es el país más grande del mundo?",
+    "options": ["Rusia", "China", "India"],
+    "correctAnswer": 0
+  },
+  "pregunta17": {
+    "question": "¿Dónde se encuentra la Torre Eiffel?",
+    "options": ["Francia", "Paris", "New York"],
+    "correctAnswer": 1
+  },
+  "pregunta18": {
+    "question": "¿Qué deporte practicaba Michael Jordan?",
+    "options": ["Rugby", "Tennis", "Baloncesto"],
+    "correctAnswer": 2
+  },
+  "pregunta19": {
+    "question": "¿En qué año comenzó la II Guerra Mundial?",
+    "options": ["1939", "1839", "1962"],
+    "correctAnswer": 0
+  },
+  "pregunta20": {
+    "question": "Si 50 es el 100%, ¿cuánto es el 90%?",
+    "options": ["27", "45", "65"],
+    "correctAnswer": 1
+  },
+  "pregunta21": {
+    "question": "¿Qué país tiene forma de bota?",
+    "options": ["Belgica", "Noruega", "Italia"],
+    "correctAnswer": 2
+  },
+  "pregunta22": {
+    "question": "¿Cuál es la moneda del Reino Unido?",
+    "options": ["La libra", "sol\t", "Euro"],
+    "correctAnswer": 0
+  },
+  "pregunta23": {
+    "question": "¿Cual es país más poblado de la Tierra?",
+    "options": ["Japón", "China", "USA\t"],
+    "correctAnswer": 1
+  },
+  "pregunta24": {
+    "question": "¿Cuál es el color que representa la esperanza?",
+    "options": ["Amarillo", "Blaco", "Verde"],
+    "correctAnswer": 2
+  },
+  "pregunta25": {
+    "question": "¿Qué rama de la Biología estudia los animales?",
+    "options": ["Zoologia", "Biologia", "Zootecnia"],
+    "correctAnswer": 0
+  },
+  "pregunta26": {
+    "question": "¿¿Cuál es el río más largo del mundo??",
+    "options": ["Nilo", "Amazonas", "Mississippi"],
+    "correctAnswer": 1
+  },
+  "pregunta27": {
+    "question": "¿Cómo se llama el animal más rápido del mundo?",
+    "options": ["Tigre", "Leopardo", "Guepardo"],
+    "correctAnswer": 2
+  },
+  "pregunta28": {
+    "question": "¿Cuál es la ciudad de los rascacielos?",
+    "options": ["Nueva York", "Los Angeles", "Florida"],
+    "correctAnswer": 0
+  },
+  "pregunta29": {
+    "question": "¿En qué país se encuentra el monumento Taj Mahal?",
+    "options": ["Turqía", "India", "Arabia"],
+    "correctAnswer": 1
+  },
+  "pregunta30": {
+    "question": "¿Cuál es el nombre de la lengua oficial en china?",
+    "options": ["Ingles", "Chino", "Mandarin"],
+    "correctAnswer": 2
+  },
+  "pregunta31": {
+    "question": "¿Quién era el general de los nazis en la Segunda Guerra Mundial?",
+    "options": ["Adolf Hitler", "Josef Stalin", "Mussolini"],
+    "correctAnswer": 0
+  },
+  "pregunta32": {
+    "question": "¿Cómo le llaman a los textos de autores desconocidos?",
+    "options": ["Desconocido", "Anonimo", "Antonimo"],
+    "correctAnswer": 1
+  },
+  "pregunta33": {
+    "question": "¿Cuál fue el primer metal que empleó el hombre?",
+    "options": ["Hierro\t", "Plata\t", "Cobre\t"],
+    "correctAnswer": 2
+  },
+  "pregunta34": {
+    "question": "¿Cómo se llama la estación espacial Rusa\t?",
+    "options": ["Mir\t\t", "MKC\t\t", "Skylab"],
+    "correctAnswer": 0
+  },
+  "pregunta35": {
+    "question": "¿Qué instrumento óptico permite ver los astros de cerca?",
+    "options": ["Lentes", "Telescopio", "Binoculares"],
+    "correctAnswer": 1
+  },
+  "pregunta36": {
+    "question": "¿Cuál es el primero de la lista de los números primos?",
+    "options": ["1", "0", "2"],
+    "correctAnswer": 2
+  },
+  "pregunta37": {
+    "question": "¿Cuál es el único mamífero capaz de volar?",
+    "options": ["Muercielago", "Nutria", "Bufalo"],
+    "correctAnswer": 0
+  },
+  "pregunta38": {
+    "question": "¿Cuál es el libro sagrado del Islam?",
+    "options": ["El corán", "Biblia", "El islam"],
+    "correctAnswer": 1
+  },
+  "pregunta39": {
+    "question": "¿Cuál es la nacionalidad de Pablo Neruda?",
+    "options": ["Paraguayo", "Argentino", "Chileno"],
+    "correctAnswer": 2
+  },
+  "pregunta40": {
+    "question": "¿A quién le crecía la nariz cuando mentía?",
+    "options": ["Pinocho", "Cristofer", "Pepe Grillo"],
+    "correctAnswer": 0
+  },
+  "pregunta41": {
+    "question": "¿Quién traicionó a Jesús?",
+    "options": ["Pedro", "Judas", "Juan"],
+    "correctAnswer": 1
+  },
+  "pregunta42": {
+    "question": "¿De qué estado fue emperador Napoleón Bonaparte?",
+    "options": ["España", "Inglaterra", "Francia"],
+    "correctAnswer": 2
+  },
+  "pregunta43": {
+    "question": "¿Cómo se llama el proceso por el cual las plantas obtienen alimento?",
+    "options": ["Fotosíntesis", "Sintetizar", "Sustancias"],
+    "correctAnswer": 0
+  },
+  "pregunta44": {
+    "question": "¿Cómo se llama la energía contenida en el núcleo de los átomos?",
+    "options": ["Energía Cinética", "Energía Nuclear", "Energía Química"],
+    "correctAnswer": 1
+  },
+  "pregunta45": {
+    "question": "¿Dónde está la Casa Blanca?",
+    "options": ["Orlando", "San Francisco", " Washington D.C."],
+    "correctAnswer": 2
+  },
+  "pregunta46": {
+    "question": "¿De qué está recubierto el cuerpo de los peces?",
+    "options": ["Escamas", "Branquios", "Piel"],
+    "correctAnswer": 0
+  },
+  "pregunta47": {
+    "question": "¿Cuánto vale el número pi?",
+    "options": ["1.1316", "3,1416", "3.1316"],
+    "correctAnswer": 1
+  },
+  "pregunta48": {
+    "question": "¿Cuál es la capital de Croacia?",
+    "options": ["Tirana", "Kabul", "Zagreb"],
+    "correctAnswer": 2
+  },
+  "pregunta49": {
+    "question": "El triángulo que tiene sus tres lados iguales ¿Cómo se llama?",
+    "options": ["Equilatero", "Isosceles", "Rectangulo"],
+    "correctAnswer": 0
+  },
+  "pregunta50": {
+    "question": "¿Cuáles son las notas musicales?",
+    "options": [
+      "Do,Re,Mi,Fe,Lo,Si",
+      "Do,Re,Mi,Fa,Sol,La,Si",
+      "Mi,Fa,Sol,La,Re,Si,Do"
+    ],
+    "correctAnswer": 1
+  },
+  "pregunta51": {
+    "question": "¿Cuál es la capital de Dinamarca?",
+    "options": ["Viena", "Berlín", "Copenhague"],
+    "correctAnswer": 2
+  },
+  "pregunta52": {
+    "question": "¿De qué lengua proviene el español?",
+    "options": ["Latin", "Griego", "Romano"],
+    "correctAnswer": 0
+  },
+  "pregunta53": {
+    "question": "¿En qué país se usó la primera bomba atómica en combate?",
+    "options": ["China", "Japón", "Alemania"],
+    "correctAnswer": 1
+  },
+  "pregunta54": {
+    "question": "¿Cuál es el metal más caro del mundo?",
+    "options": ["Platino", "Oro", "Rodio"],
+    "correctAnswer": 2
+  },
+  "pregunta55": {
+    "question": "¿Qué es más grande un átomo o una célula?",
+    "options": ["Célula", "Átomo", "Neutrón"],
+    "correctAnswer": 0
+  },
+  "pregunta56": {
+    "question": "¿Quién “sabía que no sabía nada”?",
+    "options": ["Sócrates", "Platón", "Aristóteles"],
+    "correctAnswer": 1
+  },
+  "pregunta57": {
+    "question": "¿En qué país se encuentra la Universidad de Cambridge?",
+    "options": ["Francia", "London", "Reino Unido"],
+    "correctAnswer": 2
+  },
+  "pregunta58": {
+    "question": "¿Cuándo empezó la Primera Guerra Mundial?",
+    "options": ["1914", "1813", "1922"],
+    "correctAnswer": 0
+  },
+  "pregunta59": {
+    "question": "¿Cómo se llama el procedimiento de subir la bandera?",
+    "options": ["Levantar", "Izar", "Alzar"],
+    "correctAnswer": 1
+  },
+  "pregunta60": {
+    "question": "¿Cómo se llama el fundador de Facebook?",
+    "options": ["Bill Gates", "Jeff Bezos", "Mark Zuckerberg"],
+    "correctAnswer": 2
   }
 }

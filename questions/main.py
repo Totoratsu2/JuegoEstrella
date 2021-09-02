@@ -22,7 +22,7 @@ def getQuestions() -> list[Question]:
 
     for __, _, files in walk(directory):
         for file in files:
-            questionFile = open(path.join(directory, file))
+            questionFile = open(path.join(directory, file), encoding='utf-8')
             data: TypedDict = json.load(questionFile)
             questionFile.close()
 
